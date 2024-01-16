@@ -16,7 +16,6 @@ exports.get = (req, res, next) => {
                 data: e
             });
         });
-
 }
 
 exports.getBySlug = (req, res, next) => {
@@ -34,7 +33,6 @@ exports.getBySlug = (req, res, next) => {
                 data: e
             });
         });
-
 }
 
 exports.getById = (req, res, next) => {
@@ -51,7 +49,6 @@ exports.getById = (req, res, next) => {
                 data: e
             });
         });
-
 }
 
 
@@ -69,7 +66,6 @@ exports.getByTag = (req, res, next) => {
                 data: e
             });
         });
-
 }
 
 
