@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -6,33 +6,33 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
     title: {
         type: String,
-        required: [true, 'O campo title é obrigatório'],
-
+        required: true,
+        trim: true
     },
     slug: {
         type: String,
-        required: [true, 'O campo slug é obrigatório'],
+        required: [true, 'O slug é obrigatório'],
+        trim: true,
         index: true,
         unique: true
     },
     description: {
         type: String,
-        required: [true, 'O campo description é obrigatório'],
+        required: true
     },
     price: {
         type: Number,
-        required: [true, 'O campo price é obrigatório'],
+        required: true
     },
     active: {
         type: Boolean,
-        required: [true, 'O campo active é obrigatório'],
+        required: true,
         default: true
     },
     tags: [{
         type: String,
-        required: [true, 'O campo tags é obrigatório'],
-    }]
+        required: true
+    }],
 });
-
 
 module.exports = mongoose.model('Product', schema);
